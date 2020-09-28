@@ -21,7 +21,7 @@ def factor(n):
         n = n - 1
     return res
 
-#Récursivité puissance :
+#Ex récursivité puissance :
 
 def puissance(x,n):
     if n == 0:
@@ -29,7 +29,7 @@ def puissance(x,n):
     else:
         return x*puissance(x,n-1)
 
-#Récursivité boucle :
+#Ex récursivité boucle :
     
 def boucle(i,k):
     if i == k:
