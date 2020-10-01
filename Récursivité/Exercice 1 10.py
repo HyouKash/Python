@@ -8,32 +8,25 @@ def syracuse(n):
     else:
         return syracuse(n * 3 + 1)
 
-print(syracuse(6))        
+print(syracuse(14))        
     
 #Exercice Turtle :
 
 from turtle import *
 
-ang = 40
-
-def trace(n,l):
+def recu(t):
+    for i in range(4):
+        forward(t)
+        left(90)
+    penup()
+    forward(t/2)
+    left(45)
+    pendown()
+    recu(t/2**0.5)
     
-    if n == 0 :
-        return None
-    else :
-        forward(l)
-        left(ang)
-        trace(n-1,0.7*l)
-        right(2*ang)
-        trace(n-1,0.7*l)
-        left(ang)
-        forward(-l)
-
-        
-penup()        
-goto(0,-80)
+penup()
 pendown()
-left(90)
-speed(0)
+recu(200)
 
-trace(5,100)
+
+    
