@@ -1,4 +1,9 @@
-def hanoi(n, A,B,C):
-    return n * hanoi(n-1, A, B,C)
+def hanoi(n, A,B,C):     
+    if n == 1:
+        print(A + " vers " + C)
+    else :
+        hanoi(n-1,A,C,B)
+        print(A + " vers " + C)
+        hanoi(n-1, B, A, C)
 
-print(hanoi(4, A,B,C))
+hanoi(5, "A","B","C")
